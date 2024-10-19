@@ -40,6 +40,8 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
         const val ALERT_DIALOG_DELETE = 20
     }
 
+
+    // Inflate menu for action bar if isEdit true
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         if (isEdit) {
             menuInflater.inflate(R.menu.menu_form, menu)
@@ -48,6 +50,7 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
 
     }
 
+    // Action when menu item is clicked
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.action_delete -> showAlertDialog(ALERT_DIALOG_DELETE)
@@ -69,6 +72,8 @@ class NoteAddUpdateActivity : AppCompatActivity(), View.OnClickListener {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        // define variable
         val actionBarTitle: String
         val btnTitle: String
 
